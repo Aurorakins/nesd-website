@@ -11,6 +11,9 @@ summaryLength = 70
 # not pluralize title pages by default
 pluralizelisttitles = false
 
+# No blog, so don't build tag/category/author pages
+disableKinds = ["taxonomy", "term"]
+
 [services]
     # Enable comments by entering your Disqus shortname
     [services.disqus]
@@ -82,11 +85,8 @@ pluralizelisttitles = false
 
 
 
-[[menu.main]]
-    name       = "FAQ"
-    identifier = "menu.faq"
-    url        = "/faq/"
-    weight     = 6
+# FAQ menu entry removed until content/faq.md has real questions (the page is also set not to build).
+# To bring it back: re-add a menu entry with url = "/faq/" and remove [build] from faq.md.
 
 [[menu.main]]
     identifier = "contact"
@@ -116,10 +116,8 @@ pluralizelisttitles = false
     pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
-    viewMorePostLink = "/blog/"
     author = "New England Same Day"
     defaultKeywords = ["New England Same Day", "NESD", "medical courier", "lab specimen transport", "specimen courier", "dry ice delivery", "same day delivery", "Wallingford CT", "Connecticut"]
-    mainSections = ["blog"]
     defaultDescription = "New England Same Day provides certified medical courier, lab specimen transport, and dry ice delivery services across the Northeast from Wallingford, Connecticut, 24/7 since 1998."
 
     # Social media
@@ -162,9 +160,6 @@ pluralizelisttitles = false
     query = "New England Same Day, 1127 S Broad St, Wallingford, CT 06492"
     link = "https://maps.app.goo.gl/ksyeUdNPTS6EXGVD7"
 
-[permalinks]
-    blog = "/blog/:year/:month/:day/:slugorcontentbasename/"
-
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
@@ -173,12 +168,6 @@ pluralizelisttitles = false
       <a href="mailto:walter@newenglandsameday.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
 
 [params.carouselCustomers]
     items = 4
@@ -231,17 +220,3 @@ pluralizelisttitles = false
     # For more information take a look at the README.
     title = "Our Clients"
     subtitle = ""
-
-[params.recent_posts]
-    enable = false
-    title = "From our blog"
-    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
-    hide_summary = false
-
-[params.footer.recent_posts]
-    enable = false
-
-[taxonomies]
-    category = "categories"
-    tag = "tags"
-    author = "authors"
