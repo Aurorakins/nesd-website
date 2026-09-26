@@ -1,0 +1,18 @@
+{{/* NESD override: keyless Google Maps embed instead of the theme's JavaScript API map.
+     Configure in hugo.toml [params.map]: enable, query (what the pin shows), link (the "open in Google Maps" URL). */}}
+{{ with .Site.Params.map }}{{ if .enable }}
+<section id="map-embed">
+  <iframe
+    src="{{ printf "https://www.google.com/maps?q=%s&output=embed" (.query | urlquery) | safeURL }}"
+    title="Map to {{ $.Site.Title }}"
+    width="100%" height="400" style="border:0; display:block;"
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  {{ with .link }}
+  <div class="container text-center map-link">
+    <a href="{{ . }}" target="_blank" rel="noopener" class="btn btn-template-main">
+      <i class="fas fa-map-marker-alt"></i> Open in Google Maps
+    </a>
+  </div>
+  {{ end }}
+</section>
+{{ end }}{{ end }}

@@ -1,0 +1,21 @@
+{{/* NESD override of the theme's partials/contact.html: Formspree contact form removed
+     (a different contact method is planned). Page content + address + map remain. */}}
+<div class="container" id="contact">
+    <div class="row">
+        <div class="col-md-8">
+            <section>
+                {{ .Content }}
+            </section>
+        </div>
+        <div class="col-md-4">
+            {{ with .Site.Params.address }}
+            <section>
+                <h3 class="text-uppercase">{{ i18n "contactAddrTitle" }}</h3>
+                {{ . | safeHTML }}
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ partial "map.html" . }}

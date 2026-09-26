@@ -1,2 +1,5 @@
-themes/
 .hugo_build.lock
+
+# Hugo build output (GitHub Actions builds the site on deploy)
+/public/
+/resources/_gen/

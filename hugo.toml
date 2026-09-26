@@ -14,7 +14,7 @@ pluralizelisttitles = false
 [services]
     # Enable comments by entering your Disqus shortname
     [services.disqus]
-        shortname = "devcows"
+        shortname = ""
     # Enable Google Analytics by entering your tracking code
     [services.googleAnalytics]
         id = ""
@@ -33,7 +33,7 @@ pluralizelisttitles = false
 [[menu.main]]
     name       = "Services"
     identifier = "menu.services"
-    url        = "/img/template-easy-customize.png"
+    url        = ""  # this URL is shown as an image in the Services dropdown; left blank until there is an NESD image
     weight     = 3
 
 [[menu.main]]
@@ -46,19 +46,19 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = "Large Quantity Orders"
-    url        = ""
+    url        = "/services/dry-ice/large-quantity-orders/"
     weight     = 1
     parent     = "section.dryice"
 
 [[menu.main]]
     name       = "Small Quantity Orders"
-    url        = ""
+    url        = "/services/dry-ice/small-quantity-orders/"
     weight     = 2
     parent     = "section.dryice"
 
 [[menu.main]]
     name       = "Dry Ice Shipped"
-    url        = ""
+    url        = "/services/dry-ice/dry-ice-shipped/"
     weight     = 3
     parent     = "section.dryice"
 
@@ -72,7 +72,7 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = "Lab Specimen Transport"
-    url        = ""
+    url        = "/services/medical-transport/lab-specimen-transport/"
     weight     = 1
     parent     = "section.medicaltransport"
 
@@ -100,7 +100,7 @@ pluralizelisttitles = false
 [[menu.topbar]]
     weight = 1
     name = "Phone"
-    url = "Phone: +1 (860) 328-0585"
+    url = "tel:+18603280585"
     pre = "<i class='fas fa-2x fa-phone'></i>"
 
 [[menu.topbar]]
@@ -117,60 +117,20 @@ pluralizelisttitles = false
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "DevCows"
-    defaultKeywords = ["devcows", "hugo", "go"]
+    author = "New England Same Day"
+    defaultKeywords = ["New England Same Day", "NESD", "medical courier", "lab specimen transport", "specimen courier", "dry ice delivery", "same day delivery", "Wallingford CT", "Connecticut"]
     mainSections = ["blog"]
-    defaultDescription = "Site template made by Devcows using Hugo"
+    defaultDescription = "New England Same Day provides certified medical courier, lab specimen transport, and dry ice delivery services across the Northeast from Wallingford, Connecticut, 24/7 since 1998."
 
     # Social media
     facebook_site = "https://www.facebook.com/profile.php?id=61573879167663" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
     twitter_site = "" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
 
-    # Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
-    enableGoogleMaps = true
-    googleMapsApiKey = "AIzaSyAv7Sza8NSp9_l_g8G2vlo0H4ydEPn_2jY"
-
-    latitude = "41.49944963611401"
-    longitude = "-72.81378473470878"
-    direction = "1127 S Broad St, Wallingford, CT 06492"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "blue"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 50 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - register your account to https://formspree.io/register
-    # - login and create new form
-    # - set your form's endpoint url under 'formspree_action' below
-    # - upload the generated site to your server
-    # - test a dummy email yourself
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io endpoint url
-    formspree_action = "https://formspree.io/sample/of/endpoint"
-    contact_form_ajax = false
-
-    # Formspree form supports Google reCAPTCHA Key (type v2).
-    # If you use this feature, you should enable reCAPTCHA feature in the Formspree dashboard.
-    #
-    # By default, Formspree use a redirect page for recaptcha widget.
-    # If you use a recaptcha widget in your contact page, you should do next steps.
-    # (if you don't want, skip these steps)
-    #
-    #   1. register your site on Google recaptcha admin page: https://www.google.com/recaptcha/admin
-    #   2. select reCAPTCHA v2 and checkbox widget type.
-    #   3. remember site key and secret key.
-    #   4. enter secret key into "Custom reCAPTCHA Key" field in your Formspree form setting page.
-    #   5. change `enableRecaptchaInContactForm` is to true
-    #   6. enter site key into `googleRecaptchaKey` to enable a recaptcha widget in your page.
-    #
-    enableRecaptchaInContactForm = false
-    googleRecaptchaKey = "site_key_for_google_recaptcha"
 
     about_us = "<p>NESD has been serving the medical community in the northeast region since 1998 with our home office located in Wallingford, Connecticut. Each of our certified couriers receive 5 days of hands-on training to ensure that your patients, their families, and the medical providers are receiving the best possible service and care. Each specimen is handled logistically. We scan each batch sheet and pack the specimens according to temperature. Every specimen is packed with care and delivered on time.</p>"
     copyright = "Copyright (c) 2026-2027, New England Same Day LLC; all rights reserved."
@@ -196,6 +156,12 @@ pluralizelisttitles = false
       </p>
       """
 
+# Map on the contact page (keyless Google Maps embed, see layouts/partials/map.html)
+[params.map]
+    enable = true
+    query = "New England Same Day, 1127 S Broad St, Wallingford, CT 06492"
+    link = "https://maps.app.goo.gl/ksyeUdNPTS6EXGVD7"
+
 [permalinks]
     blog = "/blog/:year/:month/:day/:slugorcontentbasename/"
 
@@ -203,7 +169,7 @@ pluralizelisttitles = false
 [params.topbar]
     enable = true
     text = """<p class="hidden-sm hidden-xs">Contact us at (860) 328-0585 or walter@newenglandsameday.com.</p>
-      <p class="hidden-md hidden-lg"><a href="Phone:+1 (860) 328-0585" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <p class="hidden-md hidden-lg"><a href="tel:+18603280585" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
       <a href="mailto:walter@newenglandsameday.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """

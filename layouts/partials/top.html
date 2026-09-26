@@ -1,0 +1,21 @@
+{{/* NESD override of the theme's partials/top.html. Change: Top-bar icons only open a new tab for http(s) links, not tel:/mailto:. */}}
+{{ if .Site.Params.topbar.enable }}
+<header>
+  <div id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-5">
+          {{ .Site.Params.topbar.text | safeHTML }}
+        </div>
+        <div class="col-xs-7">
+          <div class="social">
+            {{ range .Site.Menus.topbar.ByWeight }}
+            <a href="{{ .URL | safeURL }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }} style="opacity: 1;" title="{{ .Name }}">{{ .Pre }}</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{{ end }}
