@@ -1,0 +1,5 @@
+weight: 1
+name: "Lab Specimen Transport"
+icon: "fas fa-vials"
+url: "services/medical-transport/lab-specimen-transport/"
+description: "Scheduled, routed medical and pharmaceutical pickups. We scan every batch sheet and pack each specimen according to temperature requirements."

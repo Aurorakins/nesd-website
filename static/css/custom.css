@@ -1,5 +1,29 @@
 /* your styles go here */
-/* Example site test */
+
+/* NESD: brand colors. Overrides the theme's blue (style.blue.css) with a softened version of the
+   NESD logo navy (#090350): lighter and less saturated so it works for large areas, with the hue
+   nudged slightly toward blue (244 -> 228) because the logo's exact hue reads as purple once lightened.
+   Hover shades are darker, following the theme's pattern. */
+:root {
+    --primary-accent: #303f7e;
+    --navbar-border-top: #212d5e;
+    --button-border: #212d5e;
+    --link-focus: #222f62;
+    --form-shadow: rgba(48, 63, 126, 0.5);
+    --pagination-bg: #d4d9ed;
+    --link-hover-bg: #273468;
+    --navbar-focus: #9ca7d3;
+}
+
+/* NESD: collage of hospital/lab stock photos behind the homepage carousel (replaces the theme's photogrid.jpg).
+   Photos from Unsplash (free under the Unsplash License, attribution not required):
+     unsplash.com/photos/oCLuFi9GYNA  National Cancer Institute
+     unsplash.com/photos/HKZ3px6h_Jg  Navy Medicine
+     unsplash.com/photos/JtHwupBN3to  LEDC
+     unsplash.com/photos/yJn0zZdFIwU  Daniel Dan */
+.home-carousel {
+    background-image: url('../img/carousel-background.jpg');
+}
 
 .box-image-text .image {
     min-height: 190px;

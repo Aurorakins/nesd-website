@@ -207,11 +207,11 @@ disableKinds = ["taxonomy", "term"]
 
 [params.see_more]
     enable = true
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    icon = "fas fa-phone"
+    title = "Need one of our services?"
+    subtitle = "Our couriers are available 24/7 for routed, scheduled, and STAT deliveries across the Northeast. Call us at (860) 328-0585."
+    link_url = "contact/"
+    link_text = "Contact Us"
 
 [params.clients]
     enable = true
