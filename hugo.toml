@@ -163,11 +163,8 @@ disableKinds = ["taxonomy", "term"]
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us at (860) 328-0585 or walter@newenglandsameday.com.</p>
-      <p class="hidden-md hidden-lg"><a href="tel:+18603280585" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="mailto:walter@newenglandsameday.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
-      """
+    # Text shows on desktop only; on mobile the phone/email icons on the right already cover it
+    text = """<p class="hidden-sm hidden-xs">Contact us at (860) 328-0585 or walter@newenglandsameday.com.</p>"""
 
 [params.carouselCustomers]
     items = 4
