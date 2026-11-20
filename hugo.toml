@@ -112,7 +112,7 @@ disableKinds = ["taxonomy", "term"]
 [[menu.topbar]]
     weight = 2
     name = "Email"
-    url = "mailto:walter@newenglandsameday.com"
+    url = "mailto:chris@newenglandsameday.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
@@ -164,7 +164,7 @@ disableKinds = ["taxonomy", "term"]
 [params.topbar]
     enable = true
     # Text shows on desktop only; on mobile the phone/email icons on the right already cover it
-    text = """<p class="hidden-sm hidden-xs">Contact us at (860) 328-0585 or walter@newenglandsameday.com.</p>"""
+    text = """<p class="hidden-sm hidden-xs">Contact us at (860) 328-0585 or chris@newenglandsameday.com.</p>"""
 
 [params.carouselCustomers]
     items = 4
