@@ -1,4 +1,4 @@
-baseurl = "https://aurorakins.github.io/nesd-website/" # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
+baseurl = "https://newenglandsameday.com/" # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "New England Same Day"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
