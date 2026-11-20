@@ -43,3 +43,38 @@
 #map-embed .map-link {
     padding: 20px 0 40px;
 }
+
+/* NESD: pages with a photo (`banner` in front matter, see layouts/page/single.html) */
+.page-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.page-text p,
+.page-text li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.page-text > p:first-child {
+    font-size: 17px;
+}
+
+.page-text h3 {
+    margin-top: 30px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary-accent);
+    display: inline-block;
+}
+
+.page-text ul {
+    padding-left: 20px;
+}
+
+.page-text li {
+    margin-bottom: 6px;
+}
