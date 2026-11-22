@@ -60,12 +60,6 @@ disableKinds = ["taxonomy", "term"]
     parent     = "section.dryice"
 
 [[menu.main]]
-    name       = "Dry Ice Shipped"
-    url        = "/services/dry-ice/dry-ice-shipped/"
-    weight     = 3
-    parent     = "section.dryice"
-
-[[menu.main]]
     name       = "Medical Transport"
     identifier = "section.medicaltransport"
     url        = ""
