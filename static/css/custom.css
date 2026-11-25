@@ -39,6 +39,11 @@
     min-height: 230px;
 }
 
+/* NESD: more space between the phone/email/Facebook icons in the top bar (theme packs them edge to edge) */
+#top .social a {
+    margin-left: 14px;
+}
+
 /* NESD: map embed on the contact page */
 #map-embed .map-link {
     padding: 20px 0 40px;
