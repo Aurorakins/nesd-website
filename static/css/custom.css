@@ -44,6 +44,13 @@
     margin-left: 14px;
 }
 
+/* NESD: no underline on the main menu links (Home, Services, Contact); the theme underlines them */
+.navbar ul.nav > li > a,
+.navbar ul.nav > li > a:hover,
+.navbar ul.nav > li > a:focus {
+    text-decoration: none;
+}
+
 /* NESD: map embed on the contact page */
 #map-embed .map-link {
     padding: 20px 0 40px;
